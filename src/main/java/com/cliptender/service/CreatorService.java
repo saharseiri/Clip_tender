@@ -1,6 +1,6 @@
 package com.cliptender.service;
 
-import com.cliptender.domain.CreatorDomain;
+import com.cliptender.domain.AuthorDomain;
 import com.cliptender.repository.CreatorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,15 +15,15 @@ public class CreatorService {
 
     public int getLikeValue(int clipeRefrence) {
 
-        Optional<CreatorDomain> creatorDomain = repository.findById(clipeRefrence);
+        Optional<AuthorDomain> creatorDomain = repository.findById(clipeRefrence);
         return creatorDomain.get().getCount();
     }
 
     public void addNewClip(String clipName, String branchActivity) {
 
-        CreatorDomain creatorDomain = new CreatorDomain();
-        creatorDomain.setBranchActivity(branchActivity);
-        creatorDomain.setClipName(clipName);
-        repository.save(creatorDomain);
+        AuthorDomain authorDomain = new AuthorDomain();
+        authorDomain.setBranchActivity(branchActivity);
+        authorDomain.setClipName(clipName);
+        repository.save(authorDomain);
     }
 }
