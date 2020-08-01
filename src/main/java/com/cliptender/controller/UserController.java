@@ -1,10 +1,7 @@
 package com.cliptender.controller;
 
 
-import com.cliptender.domain.RequestVideo;
-import com.cliptender.domain.UserDomain;
 import com.cliptender.dto.VideoRequestCreationDTO;
-import com.cliptender.repository.UserRepository;
 import com.cliptender.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

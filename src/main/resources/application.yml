@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/clip_tender?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: ardehali
-    password: ardehali
+    username: root
+    password: SaHaR@19841363
   jpa:
     hibernate.ddl-auto: validate

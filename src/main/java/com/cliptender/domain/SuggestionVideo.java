@@ -6,17 +6,17 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class RequestVideo {
+public class SuggestionVideo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String title;
-    private String description;
+    private String discription;
     @ManyToMany
-    private List<UserDomain> userDomainList;
+    private List<AuthorDomain> authorDomainList;
 
-    public RequestVideo() {
+    public SuggestionVideo() {
     }
 
     public int getId() {
@@ -35,19 +35,19 @@ public class RequestVideo {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDiscription() {
+        return discription;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDiscription(String discription) {
+        this.discription = discription;
     }
 
-    public List<UserDomain> getUserDomainList() {
-        return userDomainList;
+    public List<AuthorDomain> getAuthorDomainList() {
+        return authorDomainList;
     }
 
-    public void setUserDomainList(List<UserDomain> userDomainList) {
-        this.userDomainList = userDomainList;
+    public void setAuthorDomainList(List<AuthorDomain> authorDomainList) {
+        this.authorDomainList = authorDomainList;
     }
 }

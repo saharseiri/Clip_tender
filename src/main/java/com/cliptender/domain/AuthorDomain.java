@@ -1,9 +1,7 @@
 package com.cliptender.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class AuthorDomain extends ApplicationBusinessUserDomain{
@@ -13,6 +11,8 @@ public class AuthorDomain extends ApplicationBusinessUserDomain{
     private Integer id;
     private String clipName;
     private int count;
+    @ManyToMany
+    private List<SuggestionVideo> suggestionVideoList;
 
     public AuthorDomain() {
         super();
@@ -40,5 +40,13 @@ public class AuthorDomain extends ApplicationBusinessUserDomain{
 
     public void setCount(int count) {
         this.count = count;
+    }
+
+    public List<SuggestionVideo> getSuggestionVideoList() {
+        return suggestionVideoList;
+    }
+
+    public void setSuggestionVideoList(List<SuggestionVideo> suggestionVideoList) {
+        this.suggestionVideoList = suggestionVideoList;
     }
 }

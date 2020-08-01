@@ -7,7 +7,6 @@ import com.cliptender.repository.RequestVideoRepository;
 import com.cliptender.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -45,7 +44,7 @@ public class UserService {
             videoRequestCreationDTO.setTitle(requestVideo.getTitle());
             videoRequestCreationDTO.setDescription(requestVideo.getDescription());
             videoRequestCreationDTOS.add(videoRequestCreationDTO);
-        };
+        }
         return videoRequestCreationDTOS;
     }
 

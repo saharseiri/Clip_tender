@@ -1,11 +1,12 @@
 package com.cliptender.controller;
 
-import com.cliptender.domain.AuthorDomain;
-import com.cliptender.repository.CreatorRepository;
-import com.cliptender.service.CreatorService;
+import com.cliptender.dto.VideoSuggestionCreationDTO;
+import com.cliptender.service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RestController
@@ -13,12 +14,18 @@ import org.springframework.web.bind.annotation.*;
 public class AuthorController {
 
     @Autowired
-    CreatorRepository repository;
+    AuthorService authorService;
 
-    @Autowired
-    CreatorService creatorService;
+    @PostMapping("/addnewvideo")
+    public ResponseEntity addVideo(@RequestParam int id, @RequestBody VideoSuggestionCreationDTO videoSuggestionCreationDTO){
 
-//    @GetMapping("//{id}")
-//    public
+        authorService.addNewSuggestionVideo(id , videoSuggestionCreationDTO);
+        return ResponseEntity.ok("ok");
+    }
 
+    @GetMapping("/getallsuggestionvideo")
+    public ResponseEntity getAllSuggestionVideo(){
+        List<VideoSuggestionCreationDTO> videoSuggestionCreationDTOS = authorService.getAllVideoSugegstion();
+        return ResponseEntity.ok(videoSuggestionCreationDTOS);
+    }
 }
