@@ -13,8 +13,8 @@ public class RequestVideo {
     private int id;
     private String title;
     private String description;
-    @ManyToMany
-    private List<UserDomain> userDomainList;
+//    @ManyToMany
+//    private List<UserDomain> userDomainList;
 
     public RequestVideo() {
     }
@@ -43,11 +43,11 @@ public class RequestVideo {
         this.description = description;
     }
 
-    public List<UserDomain> getUserDomainList() {
-        return userDomainList;
-    }
+//    public List<UserDomain> getUserDomainList() {
+//        return userDomainList;
+//    }
 
-    public void setUserDomainList(List<UserDomain> userDomainList) {
-        this.userDomainList = userDomainList;
-    }
+//    public void setUserDomainList(List<UserDomain> userDomainList) {
+//        this.userDomainList = userDomainList;
+//    }
 }

@@ -13,8 +13,8 @@ public class SuggestionVideo {
     private int id;
     private String title;
     private String discription;
-    @ManyToMany
-    private List<AuthorDomain> authorDomainList;
+//    @ManyToMany
+//    private List<AuthorDomain> authorDomainList;
 
     public SuggestionVideo() {
     }
@@ -43,11 +43,11 @@ public class SuggestionVideo {
         this.discription = discription;
     }
 
-    public List<AuthorDomain> getAuthorDomainList() {
-        return authorDomainList;
-    }
+//    public List<AuthorDomain> getAuthorDomainList() {
+//        return authorDomainList;
+//    }
 
-    public void setAuthorDomainList(List<AuthorDomain> authorDomainList) {
-        this.authorDomainList = authorDomainList;
-    }
+//    public void setAuthorDomainList(List<AuthorDomain> authorDomainList) {
+//        this.authorDomainList = authorDomainList;
+//    }
 }

@@ -29,7 +29,7 @@ public class UserService {
         ArrayList<UserDomain> userDomainArrayList = new ArrayList<>();
         userDomainArrayList.add(ourUser.get());
 
-        requestVideo.setUserDomainList(userDomainArrayList);
+//        requestVideo.setUserDomainList(userDomainArrayList);
 
         requestVideoRepository.save(requestVideo);
     }

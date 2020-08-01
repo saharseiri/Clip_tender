@@ -6,7 +6,6 @@ import com.cliptender.dto.VideoSuggestionCreationDTO;
 import com.cliptender.repository.AuthorRepository;
 import com.cliptender.repository.SuggestionVideoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +35,7 @@ public class AuthorService {
         ArrayList<AuthorDomain> authorDomainArrayList = new ArrayList<>();
         authorDomainArrayList.add(ourAuthor.get());
 
-        suggestionVideo.setAuthorDomainList(authorDomainArrayList);
+//        suggestionVideo.setAuthorDomainList(authorDomainArrayList);
 
         videoRepository.save(suggestionVideo);
     }

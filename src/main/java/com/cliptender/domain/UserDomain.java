@@ -12,8 +12,8 @@ public class UserDomain extends ApplicationBusinessUserDomain{
     private String clipName;
     private int count;
     private int age;
-    @ManyToMany
-    private List<RequestVideo> requestVideoList;
+//    @ManyToMany
+//    private List<RequestVideo> requestVideoList;
 
     public UserDomain() {
         super();
@@ -51,13 +51,13 @@ public class UserDomain extends ApplicationBusinessUserDomain{
         this.age = age;
     }
 
-    public List<RequestVideo> getRequestVideoList() {
-        return requestVideoList;
-    }
+//    public List<RequestVideo> getRequestVideoList() {
+//        return requestVideoList;
+//    }
 
-    public void setRequestVideoList(List<RequestVideo> requestVideoList) {
-        this.requestVideoList = requestVideoList;
-    }
+//    public void setRequestVideoList(List<RequestVideo> requestVideoList) {
+//        this.requestVideoList = requestVideoList;
+//    }
 }
 
 

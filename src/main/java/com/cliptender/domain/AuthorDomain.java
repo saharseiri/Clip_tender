@@ -11,8 +11,8 @@ public class AuthorDomain extends ApplicationBusinessUserDomain{
     private Integer id;
     private String clipName;
     private int count;
-    @ManyToMany
-    private List<SuggestionVideo> suggestionVideoList;
+//    @ManyToMany
+//    private List<SuggestionVideo> suggestionVideoList;
 
     public AuthorDomain() {
         super();
@@ -42,11 +42,11 @@ public class AuthorDomain extends ApplicationBusinessUserDomain{
         this.count = count;
     }
 
-    public List<SuggestionVideo> getSuggestionVideoList() {
-        return suggestionVideoList;
-    }
+//    public List<SuggestionVideo> getSuggestionVideoList() {
+//        return suggestionVideoList;
+//    }
 
-    public void setSuggestionVideoList(List<SuggestionVideo> suggestionVideoList) {
-        this.suggestionVideoList = suggestionVideoList;
-    }
+//    public void setSuggestionVideoList(List<SuggestionVideo> suggestionVideoList) {
+//        this.suggestionVideoList = suggestionVideoList;
+//    }
 }
