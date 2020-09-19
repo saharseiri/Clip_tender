@@ -4,20 +4,16 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class UserDomain extends ApplicationBusinessUserDomain{
+public class UserDomain {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String clipName;
-    private int count;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String gender;
     private int age;
-//    @ManyToMany
-//    private List<RequestVideo> requestVideoList;
-
-    public UserDomain() {
-        super();
-    }
 
     public Integer getId() {
         return id;
@@ -27,20 +23,36 @@ public class UserDomain extends ApplicationBusinessUserDomain{
         this.id = id;
     }
 
-    public String getClipName() {
-        return clipName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setClipName(String clipName) {
-        this.clipName = clipName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public int getCount() {
-        return count;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public int getAge() {
@@ -50,14 +62,6 @@ public class UserDomain extends ApplicationBusinessUserDomain{
     public void setAge(int age) {
         this.age = age;
     }
-
-//    public List<RequestVideo> getRequestVideoList() {
-//        return requestVideoList;
-//    }
-
-//    public void setRequestVideoList(List<RequestVideo> requestVideoList) {
-//        this.requestVideoList = requestVideoList;
-//    }
 }
 
 

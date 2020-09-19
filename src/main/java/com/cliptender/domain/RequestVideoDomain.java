@@ -1,22 +1,17 @@
 package com.cliptender.domain;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-public class RequestVideo {
+public class RequestVideoDomain {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String title;
     private String description;
-//    @ManyToMany
-//    private List<UserDomain> userDomainList;
 
-    public RequestVideo() {
+    public RequestVideoDomain() {
     }
 
     public int getId() {
@@ -43,11 +38,4 @@ public class RequestVideo {
         this.description = description;
     }
 
-//    public List<UserDomain> getUserDomainList() {
-//        return userDomainList;
-//    }
-
-//    public void setUserDomainList(List<UserDomain> userDomainList) {
-//        this.userDomainList = userDomainList;
-//    }
 }
